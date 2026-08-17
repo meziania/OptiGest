@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OptiGest">
+  <defs>
+    <linearGradient id="og-bg" x1="16" y1="8" x2="112" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14b8a6"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="og-lens" x1="24" y1="40" x2="56" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0fdfa"/>
+      <stop offset="1" stop-color="#99f6e4"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#og-bg)"/>
+  <g fill="none" stroke="#042f2e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="42" cy="62" r="18"/>
+    <circle cx="86" cy="62" r="18"/>
+    <path d="M60 62h8"/>
+    <path d="M24 62h-4"/>
+    <path d="M104 62h8"/>
+  </g>
+  <circle cx="42" cy="62" r="11" fill="url(#og-lens)" opacity=".9"/>
+  <circle cx="86" cy="62" r="11" fill="url(#og-lens)" opacity=".9"/>
+  <circle cx="36" cy="56" r="3.2" fill="#fff"/>
+  <circle cx="80" cy="56" r="3.2" fill="#fff"/>
+  <path d="M38 92h52" stroke="#5eead4" stroke-width="4" stroke-linecap="round"/>
+</svg>
