@@ -90,33 +90,143 @@
     <section id="guide" class="section">
       <div class="container">
         <h2 class="section-title">Guide d'utilisation</h2>
-        <div class="guide-block card">
+        <p class="section-intro">Parcours complet, de l'installation jusqu'aux factures PDF et aux rappels WhatsApp.</p>
+
+        <nav class="guide-toc card" aria-label="Sommaire du guide">
+          <h3>Sommaire</h3>
+          <ol>
+            <li><a href="#g-install">Installation</a></li>
+            <li><a href="#g-login">Connexion</a></li>
+            <li><a href="#g-menu">Menu et tableau de bord</a></li>
+            <li><a href="#g-clients">Clients</a></li>
+            <li><a href="#g-ordo">Ordonnances</a></li>
+            <li><a href="#g-docs">Devis et factures</a></li>
+            <li><a href="#g-articles">Articles</a></li>
+            <li><a href="#g-mutuelles">Mutuelles</a></li>
+            <li><a href="#g-rappels">Rappels WhatsApp / SMS</a></li>
+            <li><a href="#g-settings">Paramètres et mot de passe</a></li>
+            <li><a href="#g-data">Données, sauvegarde, dépannage</a></li>
+          </ol>
+        </nav>
+
+        <div id="g-install" class="guide-block card">
           <h3>1. Installation</h3>
-          <p>Téléchargez l'installateur, double-cliquez, suivez l'assistant. Un raccourci <strong>OptiGest</strong> apparaît sur le bureau.</p>
+          <ol>
+            <li>Téléchargez <strong>OptiGest-Setup.exe</strong> (bouton en bas de cette page).</li>
+            <li>Double-cliquez le fichier. Si Windows affiche un avertissement, choisissez <em>Exécuter quand même</em>.</li>
+            <li>Suivez l'assistant (dossier d'installation, raccourci bureau, menu Démarrer).</li>
+            <li>Lancez <strong>OptiGest</strong> depuis le bureau. La première ouverture peut prendre quelques secondes : le service local démarre tout seul.</li>
+          </ol>
+          <p>Prérequis : Windows 10 ou 11, 64 bits. Aucun autre logiciel n'est nécessaire.</p>
         </div>
-        <div class="guide-block card">
-          <h3>2. Première connexion</h3>
-          <p>Identifiants fournis à la livraison (exemple démo : <code>opticien@bouaziz.local</code> / <code>opticien123</code>). Changez le mot de passe après le premier usage.</p>
+
+        <div id="g-login" class="guide-block card">
+          <h3>2. Connexion</h3>
+          <ol>
+            <li>À l'écran d'accueil, saisissez l'<strong>email</strong> et le <strong>mot de passe</strong> fournis à la livraison (ils ne sont pas publiés ici).</li>
+            <li>Cliquez sur <strong>Se connecter</strong>.</li>
+            <li>Dès la première session, allez dans <strong>Paramètres</strong> et changez le mot de passe.</li>
+          </ol>
+          <p>Si la session expire, reconnectez-vous avec le même compte. Le bouton <strong>Déconnexion</strong> se trouve en bas du menu gauche.</p>
         </div>
-        <div class="guide-block card">
-          <h3>3. Clients &amp; ordonnances</h3>
-          <p>Créez vos clients, puis ajoutez les ordonnances (sphère, cylindre, axe, addition). Tout l'historique reste searchable.</p>
+
+        <div id="g-menu" class="guide-block card">
+          <h3>3. Menu et tableau de bord</h3>
+          <p>Le menu de gauche donne accès à toutes les fonctions : Tableau de bord, Clients, Ordonnances, Devis, Factures, Articles, Mutuelles, Rappels, Paramètres.</p>
+          <p>Le <strong>tableau de bord</strong> affiche en un coup d'œil :</p>
+          <ul>
+            <li>le nombre de clients ;</li>
+            <li>les devis ouverts ;</li>
+            <li>les rappels dus ;</li>
+            <li>les dossiers mutuelle en cours ;</li>
+            <li>les factures du mois et le chiffre d'affaires (TTC) ;</li>
+            <li>les derniers clients et les prochains rappels.</li>
+          </ul>
+          <p>Cliquez sur une carte pour ouvrir la page correspondante.</p>
         </div>
-        <div class="guide-block card">
-          <h3>4. Devis, factures, impression</h3>
-          <p>Composez les lignes, le total se calcule. Exportez ou imprimez en PDF pour le client.</p>
+
+        <div id="g-clients" class="guide-block card">
+          <h3>4. Clients</h3>
+          <ol>
+            <li>Menu <strong>Clients</strong> → <strong>Nouveau client</strong>.</li>
+            <li>Renseignez au minimum le <strong>nom</strong>. Ajoutez prénom, téléphone, email, adresse, CIN, date de naissance, type de mutuelle (CNOPS, CNSS, autre) et des notes si besoin.</li>
+            <li>Enregistrez. Une référence client est créée automatiquement.</li>
+          </ol>
+          <p>Dans la liste, utilisez la <strong>recherche</strong> (nom, prénom, téléphone, référence). Cliquez un client pour ouvrir sa fiche : historique des ordonnances, documents et mutuelles. Le crayon permet de modifier, la fiche téléphone d'appeler ou d'écrire.</p>
         </div>
-        <div class="guide-block card">
-          <h3>5. Mutuelles &amp; rappels</h3>
-          <p>Suivez les dossiers CNOPS/CNSS. Pour un renouvellement, créez un rappel et ouvrez WhatsApp ou SMS en un clic.</p>
+
+        <div id="g-ordo" class="guide-block card">
+          <h3>5. Ordonnances</h3>
+          <ol>
+            <li>Ouvrez un client, ou le menu <strong>Ordonnances</strong> → nouvelle ordonnance.</li>
+            <li>Choisissez le client et la date.</li>
+            <li>Saisissez l'œil droit (OD) et l'œil gauche (OG) : sphère, cylindre, axe, addition.</li>
+            <li>Complétez l'écart pupillaire (PD), le type de verre, le médecin et les notes.</li>
+            <li>Enregistrez. L'historique reste sur la fiche client : plus besoin de cahier papier.</li>
+          </ol>
         </div>
-        <div class="guide-block card">
-          <h3>6. Articles</h3>
-          <p>Ajoutez vos produits (titre, prix, catégorie). Vous pouvez masquer un article sans le supprimer.</p>
+
+        <div id="g-docs" class="guide-block card">
+          <h3>6. Devis et factures</h3>
+          <p>Le principe est le même pour un devis et une facture.</p>
+          <ol>
+            <li>Menu <strong>Devis</strong> ou <strong>Factures</strong> → <strong>Nouveau</strong>.</li>
+            <li>Sélectionnez le client, la date et le statut (brouillon, envoyé, accepté, payé, annulé).</li>
+            <li>Ajoutez des <strong>lignes</strong> : désignation, quantité, prix unitaire (DH). Le bouton <em>Ligne</em> ajoute une ligne ; la corbeille la supprime.</li>
+            <li>Les totaux HT, TVA 20 % et TTC se calculent tout seuls.</li>
+            <li>Enregistrez, puis cliquez sur <strong>PDF</strong> pour télécharger / imprimer le document.</li>
+          </ol>
+          <p>Le PDF reprend le nom du magasin, l'adresse, le téléphone et l'ICE définis dans <strong>Paramètres</strong>. Vous pouvez aussi générer le PDF depuis la liste (icône téléchargement).</p>
         </div>
-        <div class="guide-block card">
-          <h3>7. Paramètres magasin</h3>
-          <p>Dans <strong>Paramètres</strong>, renseignez le nom du magasin, l'adresse, le téléphone et l'ICE. Ces informations apparaissent sur les devis et factures PDF. Vous pouvez aussi changer votre mot de passe.</p>
+
+        <div id="g-articles" class="guide-block card">
+          <h3>7. Articles (catalogue)</h3>
+          <ol>
+            <li>Menu <strong>Articles</strong> → ajouter un produit.</li>
+            <li>Indiquez le titre, le prix, la catégorie (montures, verres, lentilles, solaires, accessoires…), une description et éventuellement une image.</li>
+            <li>Décochez « publié » pour masquer un article sans le supprimer.</li>
+          </ol>
+          <p>Ces articles servent de catalogue interne : vous pouvez reprendre les libellés et prix dans les lignes de devis / facture.</p>
+        </div>
+
+        <div id="g-mutuelles" class="guide-block card">
+          <h3>8. Mutuelles (CNOPS / CNSS)</h3>
+          <ol>
+            <li>Menu <strong>Mutuelles</strong> → nouveau dossier.</li>
+            <li>Choisissez le client, l'organisme (CNOPS, CNSS, autre), la référence, la date de dépôt et le montant.</li>
+            <li>Suivez le statut (en cours, accepté, refusé, payé) et ajoutez des notes.</li>
+          </ol>
+          <p>Le tableau de bord rappelle combien de dossiers sont encore en cours.</p>
+        </div>
+
+        <div id="g-rappels" class="guide-block card">
+          <h3>9. Rappels WhatsApp / SMS</h3>
+          <ol>
+            <li>Menu <strong>Rappels</strong> → nouveau rappel.</li>
+            <li>Choisissez le client : le téléphone et un message type se remplissent si le numéro existe sur la fiche.</li>
+            <li>Fixez la date prévue et le canal : WhatsApp, SMS, ou les deux.</li>
+            <li>Enregistrez. Quand le rappel est dû, cliquez l'icône WhatsApp (ouvre wa.me) ou SMS (ouvre l'application SMS de Windows).</li>
+          </ol>
+          <p>Marquez le rappel comme envoyé / terminé une fois le client contacté. Les rappels dus apparaissent aussi sur le tableau de bord.</p>
+        </div>
+
+        <div id="g-settings" class="guide-block card">
+          <h3>10. Paramètres et mot de passe</h3>
+          <p>Menu <strong>Paramètres</strong>, deux blocs :</p>
+          <ul>
+            <li><strong>Magasin</strong> : nom, adresse, téléphone, email, ICE, TVA par défaut. Ces infos s'impriment sur les PDF. Cliquez <em>Enregistrer</em>.</li>
+            <li><strong>Mot de passe</strong> : mot de passe actuel, nouveau mot de passe (6 caractères minimum), confirmation. Cliquez <em>Changer le mot de passe</em>.</li>
+          </ul>
+        </div>
+
+        <div id="g-data" class="guide-block card">
+          <h3>11. Données, sauvegarde et dépannage</h3>
+          <ul>
+            <li>Tout est <strong>local</strong> sur le PC (fichier SQLite). Aucune donnée n'est envoyée sur internet, sauf WhatsApp / SMS que vous ouvrez vous-même.</li>
+            <li>Pour sauvegarder : copiez le dossier <strong>%AppData%\OptiGest</strong> (base <code>optigest.db</code>) vers une clé USB ou un disque.</li>
+            <li>Si l'app affiche « Impossible de démarrer le service local » : fermez OptiGest, attendez 3 secondes, relancez. Ne lancez pas deux fois l'application en même temps.</li>
+            <li>Pour réinstaller : désinstallez OptiGest, téléchargez à nouveau l'installateur, réinstallez. La base dans AppData est en général conservée.</li>
+          </ul>
         </div>
       </div>
     </section>

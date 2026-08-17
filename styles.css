@@ -172,6 +172,22 @@ body {
 .guide-block { margin-bottom: 0.85rem; }
 .guide-block h3 { margin-top: 0; }
 .guide-block p { margin: 0.4rem 0 0; }
+.guide-block ol,
+.guide-block ul,
+.guide-toc ol {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+.guide-block li,
+.guide-toc li { margin: 0.35rem 0; }
+.guide-toc h3 { margin: 0 0 0.4rem; }
+.guide-toc a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.guide-toc a:hover { text-decoration: underline; }
 code {
   font-size: 0.85em;
   background: rgba(0, 0, 0, 0.25);
