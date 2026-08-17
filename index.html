@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OptiGest — Gestion magasin d'optique</title>
+  <meta name="description" content="OptiGest : application Windows pour opticiens — clients, ordonnances, devis, factures, mutuelles, rappels et articles. Installateur unique.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="brand-name">Opti<span>Gest</span></span>
+      </a>
+      <button type="button" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="nav" id="nav-menu">
+        <a href="#presentation">Présentation</a>
+        <a href="#guide">Guide</a>
+        <a href="#telechargement">Télécharger</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="hero-kicker">Application Windows pour opticiens</p>
+        <h1 class="hero-title">Opti<span>Gest</span></h1>
+        <p class="hero-tagline">Toute la gestion de votre magasin d'optique, sur PC — comme SoaiTrav, pensée pour l'optique.</p>
+        <a href="#telechargement" class="btn btn-primary">Télécharger l'installateur</a>
+      </div>
+    </section>
+
+    <section id="presentation" class="section">
+      <div class="container">
+        <h2 class="section-title">Présentation du service</h2>
+        <p class="section-intro">OptiGest est une application desktop Windows (données en local, SQLite). Un seul fichier d'installation : raccourci bureau, menu Démarrer, tout compris.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Clients + recherche</h3>
+            <p>Fiches clients, téléphone, mutuelle, historique complet.</p>
+          </article>
+          <article class="card">
+            <h3>Ordonnances</h3>
+            <p>Historique optique OD/OG, dates, notes — plus de cahier papier.</p>
+          </article>
+          <article class="card">
+            <h3>Devis &amp; factures</h3>
+            <p>Lignes, totaux en DH, impression PDF.</p>
+          </article>
+          <article class="card">
+            <h3>Mutuelles</h3>
+            <p>Suivi CNOPS / CNSS : dépôt, montant, statut.</p>
+          </article>
+          <article class="card">
+            <h3>Rappels WhatsApp / SMS</h3>
+            <p>Liste des rappels + ouverture directe WhatsApp ou SMS.</p>
+          </article>
+          <article class="card">
+            <h3>Articles</h3>
+            <p>Catalogue magasin : montures, verres, lentilles, accessoires.</p>
+          </article>
+          <article class="card">
+            <h3>Tableau de bord</h3>
+            <p>Vue d'ensemble du travail du jour et des dossiers en cours.</p>
+          </article>
+        </div>
+        <div class="prerequis card">
+          <h3>Prérequis</h3>
+          <p>Windows 10 ou 11, 64 bits. Aucune installation .NET à part : tout est dans <strong>OptiGest-Setup.exe</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="guide" class="section">
+      <div class="container">
+        <h2 class="section-title">Guide d'utilisation</h2>
+        <div class="guide-block card">
+          <h3>1. Installation</h3>
+          <p>Téléchargez l'installateur, double-cliquez, suivez l'assistant. Un raccourci <strong>OptiGest</strong> apparaît sur le bureau.</p>
+        </div>
+        <div class="guide-block card">
+          <h3>2. Première connexion</h3>
+          <p>Identifiants fournis à la livraison (exemple démo : <code>opticien@bouaziz.local</code> / <code>opticien123</code>). Changez le mot de passe après le premier usage.</p>
+        </div>
+        <div class="guide-block card">
+          <h3>3. Clients &amp; ordonnances</h3>
+          <p>Créez vos clients, puis ajoutez les ordonnances (sphère, cylindre, axe, addition). Tout l'historique reste searchable.</p>
+        </div>
+        <div class="guide-block card">
+          <h3>4. Devis, factures, impression</h3>
+          <p>Composez les lignes, le total se calcule. Exportez ou imprimez en PDF pour le client.</p>
+        </div>
+        <div class="guide-block card">
+          <h3>5. Mutuelles &amp; rappels</h3>
+          <p>Suivez les dossiers CNOPS/CNSS. Pour un renouvellement, créez un rappel et ouvrez WhatsApp ou SMS en un clic.</p>
+        </div>
+        <div class="guide-block card">
+          <h3>6. Articles</h3>
+          <p>Ajoutez vos produits (titre, prix, catégorie). Vous pouvez masquer un article sans le supprimer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="telechargement" class="section">
+      <div class="container">
+        <div class="download-card card">
+          <h2 class="download-title">Télécharger OptiGest</h2>
+          <p class="download-desc">Version Windows 64 bits — installateur unique.</p>
+          <a href="installer/OptiGest-Setup.exe" class="btn btn-primary btn-download" download>Télécharger OptiGest</a>
+          <p class="download-note">Placez le fichier <code>OptiGest-Setup.exe</code> dans le dossier <code>installer/</code> après <code>npm run dist:desktop</code> puis <code>npm run sync:installer-site</code>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>OptiGest — Gestion magasin d'optique. &copy; A. Meziani.</p>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var header = document.querySelector(".header");
+      var toggle = document.querySelector(".nav-toggle");
+      var nav = document.getElementById("nav-menu");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", function () {
+        var open = header.classList.toggle("nav-open");
+        toggle.setAttribute("aria-expanded", open);
+      });
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          header.classList.remove("nav-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
