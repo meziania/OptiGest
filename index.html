@@ -126,8 +126,8 @@
         <div class="download-card card">
           <h2 class="download-title">Télécharger OptiGest</h2>
           <p class="download-desc">Version Windows 64 bits — installateur unique.</p>
-          <a id="download-btn" href="installer/OptiGest-Setup.exe" class="btn btn-primary btn-download">Télécharger OptiGest</a>
-          <p id="download-note" class="download-note">Windows 64 bits — installateur local (dernière build).</p>
+          <a id="download-btn" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe" class="btn btn-primary btn-download">Télécharger OptiGest</a>
+          <p id="download-note" class="download-note">Windows 64 bits — dernière version.</p>
         </div>
       </div>
     </section>
@@ -146,9 +146,9 @@
       var btn = document.getElementById("download-btn");
       var note = document.getElementById("download-note");
       var local = location.hostname === "localhost" || location.hostname === "127.0.0.1";
-      if (btn && !local) {
-        btn.href = "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe";
-        if (note) note.textContent = "Windows 64 bits — dernière version via GitHub Releases.";
+      if (btn && local) {
+        btn.href = "installer/OptiGest-Setup.exe";
+        if (note) note.textContent = "Windows 64 bits — installateur local (dernière build).";
       }
       if (!toggle || !nav) return;
       toggle.addEventListener("click", function () {
