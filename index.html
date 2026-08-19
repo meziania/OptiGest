@@ -82,7 +82,7 @@
         </div>
         <div class="prerequis card">
           <h3>Prérequis</h3>
-          <p>Windows 10 ou 11, 64 bits. Tout est inclus dans <strong>OptiGest-Setup.exe</strong> : aucune installation supplémentaire.</p>
+          <p>Windows 10/11 64 bits, ou macOS 12+ (Intel ou Apple Silicon). Tout est inclus dans l'installateur : aucune installation supplémentaire.</p>
         </div>
       </div>
     </section>
@@ -111,13 +111,20 @@
 
         <div id="g-install" class="guide-block card">
           <h3>1. Installation</h3>
+          <p><strong>Windows</strong></p>
           <ol>
-            <li>Téléchargez <strong>OptiGest-Setup.exe</strong> (bouton en bas de cette page).</li>
-            <li>Double-cliquez le fichier. Si Windows affiche un avertissement, choisissez <em>Exécuter quand même</em>.</li>
-            <li>Suivez l'assistant (dossier d'installation, raccourci bureau, menu Démarrer).</li>
-            <li>Lancez <strong>OptiGest</strong> depuis le bureau. La première ouverture peut prendre quelques secondes : le service local démarre tout seul.</li>
+            <li>Téléchargez <strong>OptiGest pour Windows</strong> (<code>OptiGest-Setup.exe</code>).</li>
+            <li>Double-cliquez. Si Windows affiche un avertissement, choisissez <em>Exécuter quand même</em>.</li>
+            <li>Suivez l'assistant (raccourci bureau, menu Démarrer).</li>
+            <li>Lancez <strong>OptiGest</strong>. La première ouverture peut prendre quelques secondes.</li>
           </ol>
-          <p>Prérequis : Windows 10 ou 11, 64 bits. Aucun autre logiciel n'est nécessaire.</p>
+          <p><strong>Mac</strong> (macOS 12 ou plus)</p>
+          <ol>
+            <li>Téléchargez <strong>OptiGest pour Mac</strong> : Apple Silicon (M1/M2/M3/M4) = <code>arm64</code>, Intel = <code>x64</code>.</li>
+            <li>Ouvrez le <code>.zip</code>, glissez <strong>OptiGest.app</strong> dans le dossier Applications.</li>
+            <li>Au premier lancement : clic droit sur l'app → <em>Ouvrir</em> (l'app n'est pas signée Apple). Si macOS bloque encore : Réglages Système → Confidentialité et sécurité → <em>Ouvrir quand même</em>.</li>
+            <li>En terminal, si besoin : <code>xattr -cr /Applications/OptiGest.app</code> puis relancez.</li>
+          </ol>
         </div>
 
         <div id="g-login" class="guide-block card">
@@ -235,9 +242,13 @@
       <div class="container">
         <div class="download-card card">
           <h2 class="download-title">Télécharger OptiGest</h2>
-          <p class="download-desc">Version Windows 64 bits — installateur unique.</p>
-          <a id="download-btn" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe" class="btn btn-primary btn-download">Télécharger OptiGest</a>
-          <p id="download-note" class="download-note">Windows 64 bits — dernière version.</p>
+          <p class="download-desc">Choisissez votre système. Données en local, un seul fichier.</p>
+          <div class="download-actions">
+            <a id="download-win" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe" class="btn btn-primary btn-download">Windows</a>
+            <a id="download-mac-arm" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.zip" class="btn btn-primary btn-download">Mac (Apple Silicon)</a>
+            <a id="download-mac-intel" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.zip" class="btn btn-secondary btn-download">Mac (Intel)</a>
+          </div>
+          <p id="download-note" class="download-note">Windows 10/11 64 bits · macOS 12+ · dernière version.</p>
         </div>
       </div>
     </section>
@@ -253,12 +264,16 @@
       var header = document.querySelector(".header");
       var toggle = document.querySelector(".nav-toggle");
       var nav = document.getElementById("nav-menu");
-      var btn = document.getElementById("download-btn");
+      var win = document.getElementById("download-win");
+      var macArm = document.getElementById("download-mac-arm");
+      var macIntel = document.getElementById("download-mac-intel");
       var note = document.getElementById("download-note");
       var local = location.hostname === "localhost" || location.hostname === "127.0.0.1";
-      if (btn && local) {
-        btn.href = "installer/OptiGest-Setup.exe";
-        if (note) note.textContent = "Windows 64 bits — installateur local (dernière build).";
+      if (local) {
+        if (win) win.href = "installer/OptiGest-Setup.exe";
+        if (macArm) macArm.href = "installer/OptiGest-Mac-arm64.zip";
+        if (macIntel) macIntel.href = "installer/OptiGest-Mac-x64.zip";
+        if (note) note.textContent = "Installateurs locaux (dernière build).";
       }
       if (!toggle || !nav) return;
       toggle.addEventListener("click", function () {
