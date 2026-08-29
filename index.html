@@ -25,6 +25,7 @@
       </button>
       <nav class="nav" id="nav-menu">
         <a href="#presentation">Présentation</a>
+        <a href="#guide-mac">Guide Mac</a>
         <a href="#guide">Guide</a>
         <a href="#telechargement">Télécharger</a>
       </nav>
@@ -95,7 +96,8 @@
         <nav class="guide-toc card" aria-label="Sommaire du guide">
           <h3>Sommaire</h3>
           <ol>
-            <li><a href="#g-install">Installation</a></li>
+            <li><a href="#g-install">Installation Windows</a></li>
+            <li><a href="#guide-mac">Installation Mac</a></li>
             <li><a href="#g-login">Connexion</a></li>
             <li><a href="#g-menu">Menu et tableau de bord</a></li>
             <li><a href="#g-clients">Clients</a></li>
@@ -118,13 +120,7 @@
             <li>Suivez l'assistant (raccourci bureau, menu Démarrer).</li>
             <li>Lancez <strong>OptiGest</strong>. La première ouverture peut prendre quelques secondes.</li>
           </ol>
-          <p><strong>Mac</strong> (macOS 12 ou plus)</p>
-          <ol>
-            <li>Téléchargez <strong>OptiGest pour Mac</strong> : Apple Silicon (M1/M2/M3/M4) = <code>arm64</code>, Intel = <code>x64</code>.</li>
-            <li>Ouvrez le <code>.zip</code>, glissez <strong>OptiGest.app</strong> dans le dossier Applications.</li>
-            <li>Au premier lancement : clic droit sur l'app → <em>Ouvrir</em> (l'app n'est pas signée Apple). Si macOS bloque encore : Réglages Système → Confidentialité et sécurité → <em>Ouvrir quand même</em>.</li>
-            <li>En terminal, si besoin : <code>xattr -cr /Applications/OptiGest.app</code> puis relancez.</li>
-          </ol>
+          <p><strong>Mac</strong> — suivez le <a href="#guide-mac">guide d'installation Mac</a> (choix Apple Silicon / Intel, premier lancement, sauvegarde).</p>
         </div>
 
         <div id="g-login" class="guide-block card">
@@ -230,9 +226,69 @@
           <h3>11. Données, sauvegarde et dépannage</h3>
           <ul>
             <li>Tout est <strong>local</strong> sur le PC (fichier SQLite). Aucune donnée n'est envoyée sur internet, sauf WhatsApp / SMS que vous ouvrez vous-même.</li>
-            <li>Pour sauvegarder : copiez le dossier <strong>%AppData%\OptiGest</strong> (base <code>optigest.db</code>) vers une clé USB ou un disque.</li>
+            <li>Pour sauvegarder sous <strong>Windows</strong> : copiez le dossier <strong>%AppData%\OptiGest</strong> (base <code>optigest.db</code>) vers une clé USB ou un disque.</li>
+            <li>Pour sauvegarder sous <strong>Mac</strong> : copiez <strong>~/Library/Application Support/OptiGest</strong> (même fichier <code>optigest.db</code>).</li>
             <li>Si l'app affiche « Impossible de démarrer le service local » : fermez OptiGest, attendez 3 secondes, relancez. Ne lancez pas deux fois l'application en même temps.</li>
-            <li>Pour réinstaller : désinstallez OptiGest, téléchargez à nouveau l'installateur, réinstallez. La base dans AppData est en général conservée.</li>
+            <li>Pour réinstaller : Windows — désinstallez puis relancez le Setup. Mac — remplacez <code>OptiGest.app</code> dans Applications. La base locale est en général conservée.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="guide-mac" class="section">
+      <div class="container">
+        <h2 class="section-title">Guide d'installation Mac</h2>
+        <p class="section-intro">macOS 12 ou plus. Choisissez le bon fichier, placez l'app dans Applications, puis autorisez l'ouverture au premier lancement.</p>
+
+        <div class="guide-block card">
+          <h3>1. Quel fichier télécharger ?</h3>
+          <p>Menu Pomme → <strong>À propos de ce Mac</strong> :</p>
+          <div class="mac-pick">
+            <article>
+              <h4>Puce Apple (M1, M2, M3, M4)</h4>
+              <p>Bouton <strong>Mac (Apple Silicon)</strong> — fichier <code>OptiGest-Mac-arm64.zip</code>.</p>
+            </article>
+            <article>
+              <h4>Processeur Intel</h4>
+              <p>Bouton <strong>Mac (Intel)</strong> — fichier <code>OptiGest-Mac-x64.zip</code>.</p>
+            </article>
+          </div>
+          <p><a href="#telechargement" class="btn btn-primary">Aller au téléchargement</a></p>
+        </div>
+
+        <div class="guide-block card">
+          <h3>2. Installer l'application</h3>
+          <ol>
+            <li>Ouvrez le <code>.zip</code> (double-clic dans Téléchargements).</li>
+            <li>Vous voyez <strong>OptiGest.app</strong>.</li>
+            <li>Glissez-la dans le dossier <strong>Applications</strong> (Launchpad et Spotlight la trouveront).</li>
+            <li>Vous pouvez ensuite supprimer le fichier <code>.zip</code>.</li>
+          </ol>
+        </div>
+
+        <div class="guide-block card">
+          <h3>3. Premier lancement (macOS bloque l'app)</h3>
+          <p>L'application n'est pas signée par Apple. Au premier clic, macOS peut afficher qu'elle ne peut pas être ouverte. C'est normal.</p>
+          <ol>
+            <li>Dans Applications, <strong>clic droit</strong> (ou Ctrl + clic) sur OptiGest → <em>Ouvrir</em>.</li>
+            <li>Dans l'alerte, cliquez encore <em>Ouvrir</em>.</li>
+            <li>Si ça reste bloqué : menu Pomme → <strong>Réglages Système</strong> → <strong>Confidentialité et sécurité</strong> → en bas, <em>Ouvrir quand même</em>.</li>
+          </ol>
+          <p>Ensuite OptiGest s'ouvre comme les autres apps. La première fois peut prendre quelques secondes.</p>
+        </div>
+
+        <div class="guide-block card">
+          <h3>4. Connexion</h3>
+          <p>Saisissez l'email et le mot de passe fournis à la livraison (ils ne sont pas publiés ici). Changez le mot de passe dans <strong>Paramètres</strong> dès la première session.</p>
+        </div>
+
+        <div class="guide-block card">
+          <h3>5. Données et sauvegarde</h3>
+          <ul>
+            <li>Tout reste <strong>sur ce Mac</strong>. Ce n'est pas le même magasin que Windows, sauf si vous copiez la base.</li>
+            <li>Dossier : <code>~/Library/Application Support/OptiGest</code> — fichier <code>optigest.db</code>.</li>
+            <li>Pour sauvegarder : copiez ce dossier vers une clé USB ou un disque.</li>
+            <li>Si le message « Impossible de démarrer le service local » apparaît : quittez avec Cmd+Q, attendez 3 secondes, relancez. N'ouvrez pas deux fois l'app en même temps.</li>
           </ul>
         </div>
       </div>
@@ -248,7 +304,7 @@
             <a id="download-mac-arm" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.zip" class="btn btn-primary btn-download">Mac (Apple Silicon)</a>
             <a id="download-mac-intel" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.zip" class="btn btn-secondary btn-download">Mac (Intel)</a>
           </div>
-          <p id="download-note" class="download-note">Windows 10/11 64 bits · macOS 12+ · dernière version.</p>
+          <p id="download-note" class="download-note">Windows 10/11 64 bits · macOS 12+ · dernière version. <a href="#guide-mac">Guide d'installation Mac</a></p>
         </div>
       </div>
     </section>
