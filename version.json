@@ -2,7 +2,7 @@
   "version": "1.0.2",
   "notes": "Vérification des mises à jour au démarrage.",
   "windows": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe",
-  "macArm": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.dmg",
-  "macIntel": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.dmg",
-  "page": "https://opti-gest.vercel.app/#telechargement"
+  "macArm": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.zip",
+  "macIntel": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.zip",
+  "page": "https://meziania.github.io/OptiGest/#telechargement"
 }
