@@ -231,6 +231,19 @@ code {
   color: var(--navy);
 }
 .mac-pick p { margin: 0; }
+.mac-detect,
+.download-detect {
+  display: inline-block;
+  margin: 0.9rem 0 0;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(182, 120, 81, 0.12);
+  border: 1px solid rgba(182, 120, 81, 0.35);
+  color: var(--accent-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.download-detect { margin-bottom: 0.4rem; }
 .guide-block .btn { margin-top: 0.9rem; }
 .download-note a {
   color: var(--accent-2);

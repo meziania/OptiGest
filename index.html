@@ -253,6 +253,7 @@
               <p>Bouton <strong>Mac (Intel)</strong> — fichier <code>OptiGest-Mac-x64.zip</code>.</p>
             </article>
           </div>
+          <p id="mac-detect" class="mac-detect" hidden></p>
           <p><a href="#telechargement" class="btn btn-primary">Aller au téléchargement</a></p>
         </div>
 
@@ -299,7 +300,8 @@
         <div class="download-card card">
           <h2 class="download-title">Télécharger Bouaziz Optical</h2>
           <p class="download-desc">Choisissez votre système. Données en local, un seul fichier.</p>
-          <div class="download-actions">
+          <p id="download-detect" class="download-detect" hidden></p>
+          <div class="download-actions" id="download-actions">
             <a id="download-win" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe" class="btn btn-primary btn-download">Windows</a>
             <a id="download-mac-arm" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.zip" class="btn btn-primary btn-download">Mac (Apple Silicon)</a>
             <a id="download-mac-intel" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.zip" class="btn btn-secondary btn-download">Mac (Intel)</a>
@@ -331,6 +333,56 @@
         if (macIntel) macIntel.href = "installer/OptiGest-Mac-x64.zip";
         if (note) note.textContent = "Installateurs locaux (dernière build).";
       }
+
+      // Le binaire arm64 refuse de démarrer sur Intel et inversement : on met en
+      // avant le bon fichier au lieu de laisser le visiteur deviner.
+      function detectMacChip() {
+        var ua = navigator.userAgent || "";
+        if (!/Mac/i.test(ua) || /iPhone|iPad|iPod/i.test(ua)) return null;
+        var renderer = "";
+        try {
+          var canvas = document.createElement("canvas");
+          var gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+          if (gl) {
+            var dbg = gl.getExtension("WEBGL_debug_renderer_info");
+            renderer = String(
+              (dbg && gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL)) || gl.getParameter(gl.RENDERER) || ""
+            );
+          }
+        } catch (e) {
+          renderer = "";
+        }
+        if (/apple\s*(gpu|m\d)/i.test(renderer)) return "arm";
+        if (/intel|amd|radeon|nvidia|geforce/i.test(renderer)) return "intel";
+        return null;
+      }
+
+      var chip = detectMacChip();
+      if (chip && macArm && macIntel) {
+        var best = chip === "arm" ? macArm : macIntel;
+        var other = chip === "arm" ? macIntel : macArm;
+        var label = chip === "arm" ? "Mac Apple Silicon" : "Mac Intel";
+
+        best.classList.remove("btn-secondary");
+        best.classList.add("btn-primary");
+        other.classList.remove("btn-primary");
+        other.classList.add("btn-secondary");
+        if (win) {
+          win.classList.remove("btn-primary");
+          win.classList.add("btn-secondary");
+        }
+        var actions = document.getElementById("download-actions");
+        if (actions) actions.insertBefore(best, actions.firstChild);
+
+        var message = "Détecté : " + label + " → téléchargez « " + best.textContent.trim() + " ».";
+        ["download-detect", "mac-detect"].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.textContent = message;
+          el.hidden = false;
+        });
+      }
+
       if (!toggle || !nav) return;
       toggle.addEventListener("click", function () {
         var open = header.classList.toggle("nav-open");
