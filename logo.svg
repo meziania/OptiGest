@@ -1,17 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <defs>
-    <radialGradient id="gold" cx="35%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="#fff3c4"/>
-      <stop offset="35%" stop-color="#ffd76a"/>
-      <stop offset="70%" stop-color="#d4af37"/>
-      <stop offset="100%" stop-color="#8a6a1a"/>
-    </radialGradient>
-  </defs>
-  <circle cx="128" cy="128" r="128" fill="#050505"/>
-  <circle cx="128" cy="128" r="124" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.4"/>
-  <g fill="url(#gold)">
-    <text x="40" y="110" font-family="Great Vibes, Segoe Script, cursive" font-size="52" transform="rotate(-8 88 100)">Bouaziz</text>
-    <text x="76" y="188" font-family="Great Vibes, Segoe Script, cursive" font-size="50" transform="rotate(6 148 175)">Optical</text>
-    <path d="M170 116 C 152 140, 116 160, 90 166 C 76 170, 68 178, 78 188 C 90 178, 130 166, 180 146 C 198 138, 190 126, 170 116 Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="OptiGest">
+  <circle cx="128" cy="128" r="128" fill="#1A2744"/>
+  <circle cx="128" cy="128" r="116" fill="none" stroke="#B67851" stroke-width="10"/>
+  <g fill="none" stroke="#F5EDE4" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="42" y="98" width="72" height="56" rx="28"/>
+    <rect x="142" y="98" width="72" height="56" rx="28"/>
+    <path d="M114 126h28"/>
+    <path d="M42 122H26"/>
+    <path d="M214 122h16"/>
   </g>
+  <circle cx="78" cy="126" r="8" fill="#B67851"/>
+  <circle cx="178" cy="126" r="8" fill="#B67851"/>
 </svg>

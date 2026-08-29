@@ -1,4 +1,4 @@
-﻿# OptiGest
+# OptiGest
 
 Site de présentation et téléchargement de l'application desktop Windows pour magasin d'optique.
 

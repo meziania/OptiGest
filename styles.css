@@ -1,13 +1,14 @@
 :root {
-  --bg: #050505;
-  --bg-2: #0a0a0a;
-  --card: #141414;
-  --border: #d4af37;
-  --accent: #d4af37;
-  --accent-2: #b8860b;
-  --text: #f6f0de;
-  --muted: #b7a57a;
-  --radius: 12px;
+  --bg: #faf5f0;
+  --bg-2: #f3ebe3;
+  --card: #ffffff;
+  --border: rgba(26, 39, 68, 0.1);
+  --accent: #b67851;
+  --accent-2: #9a6242;
+  --navy: #1a2744;
+  --text: #1c1c1c;
+  --muted: #7a7a7a;
+  --radius: 16px;
 }
 
 *,
@@ -19,7 +20,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: "DM Sans", system-ui, sans-serif;
-  background: linear-gradient(180deg, #000000 0%, #0a0a0a 45%, #16120a 100%);
+  background: linear-gradient(180deg, #faf5f0 0%, #f3ebe3 55%, #efe4d8 100%);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
@@ -36,9 +37,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(0, 0, 0, 0.92);
+  background: rgba(26, 39, 68, 0.96);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .header-inner {
@@ -53,7 +54,7 @@ body {
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
-  color: inherit;
+  color: #fff;
 }
 
 .logo {
@@ -61,7 +62,7 @@ body {
   height: 40px;
   border-radius: 50%;
   display: block;
-  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 0 1px rgba(182, 120, 81, 0.45);
 }
 .hero-logo {
   width: 120px;
@@ -69,19 +70,20 @@ body {
   border-radius: 50%;
   margin: 0 auto 0.75rem;
   display: block;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 0 2px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 12px 32px rgba(26, 39, 68, 0.12), 0 0 0 2px rgba(182, 120, 81, 0.35);
 }
 
 .brand-name {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.25rem;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1.15rem;
   font-weight: 700;
+  color: #fff;
 }
 .brand-name span { color: var(--accent); }
 
 .nav { display: flex; gap: 1.25rem; }
 .nav a {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
@@ -115,9 +117,10 @@ body {
   font-weight: 700;
 }
 .hero-title {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
   margin: 0.4rem 0 0.8rem;
+  color: var(--navy);
 }
 .hero-title span { color: var(--accent); }
 .hero-tagline {
@@ -139,15 +142,15 @@ body {
 }
 .btn-primary {
   background: var(--accent);
-  color: #050505;
+  color: #fff;
 }
 .btn-primary:hover { filter: brightness(1.05); }
 .btn-secondary {
   background: transparent;
-  color: var(--accent);
+  color: var(--accent-2);
   border: 2px solid var(--accent);
 }
-.btn-secondary:hover { background: rgba(212, 175, 55, 0.12); }
+.btn-secondary:hover { background: rgba(182, 120, 81, 0.1); }
 .btn-download { margin-top: 0.5rem; }
 .download-actions {
   display: flex;
@@ -158,9 +161,10 @@ body {
 
 .section { padding: 3rem 0; }
 .section-title {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.8rem;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1.6rem;
   margin: 0 0 0.6rem;
+  color: var(--navy);
 }
 .section-intro {
   color: var(--muted);
@@ -173,17 +177,18 @@ body {
   gap: 1rem;
 }
 .card {
-  background: rgba(20, 16, 8, 0.85);
-  border: 1px solid rgba(212, 175, 55, 0.28);
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.15rem 1.2rem;
+  box-shadow: 0 8px 28px rgba(26, 39, 68, 0.06);
 }
-.card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; color: var(--navy); }
 .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
 .prerequis { margin-top: 1.25rem; }
 .guide-block { margin-bottom: 0.85rem; }
-.guide-block h3 { margin-top: 0; }
+.guide-block h3 { margin-top: 0; color: var(--navy); }
 .guide-block p { margin: 0.4rem 0 0; }
 .guide-block ol,
 .guide-block ul,
@@ -194,22 +199,22 @@ body {
 }
 .guide-block li,
 .guide-toc li { margin: 0.35rem 0; }
-.guide-toc h3 { margin: 0 0 0.4rem; }
+.guide-toc h3 { margin: 0 0 0.4rem; color: var(--navy); }
 .guide-toc a {
-  color: var(--accent);
+  color: var(--accent-2);
   text-decoration: none;
   font-weight: 600;
 }
 .guide-toc a:hover { text-decoration: underline; }
 code {
   font-size: 0.85em;
-  background: rgba(0, 0, 0, 0.25);
+  background: var(--bg-2);
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
 }
 
 .download-card { text-align: center; padding: 2rem 1.5rem; }
-.download-title { font-family: "Cormorant Garamond", Georgia, serif; margin: 0 0 0.4rem; }
+.download-title { font-family: "DM Sans", system-ui, sans-serif; margin: 0 0 0.4rem; color: var(--navy); }
 .download-desc { color: var(--muted); }
 .download-note { font-size: 0.8rem; color: var(--muted); margin-top: 1rem; }
 
@@ -230,7 +235,7 @@ code {
     top: 64px;
     flex-direction: column;
     padding: 1rem 1.25rem 1.25rem;
-    background: #000;
+    background: var(--navy);
   }
   .header.nav-open .nav { display: flex; }
 }
