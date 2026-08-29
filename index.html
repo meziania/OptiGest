@@ -246,11 +246,11 @@
           <div class="mac-pick">
             <article>
               <h4>Puce Apple (M1, M2, M3, M4)</h4>
-              <p>Bouton <strong>Mac (Apple Silicon)</strong> — fichier <code>OptiGest-Mac-arm64.zip</code>.</p>
+              <p>Bouton <strong>Mac (Apple Silicon)</strong> — fichier <code>OptiGest-Mac-arm64.dmg</code>.</p>
             </article>
             <article>
               <h4>Processeur Intel</h4>
-              <p>Bouton <strong>Mac (Intel)</strong> — fichier <code>OptiGest-Mac-x64.zip</code>.</p>
+              <p>Bouton <strong>Mac (Intel)</strong> — fichier <code>OptiGest-Mac-x64.dmg</code>.</p>
             </article>
           </div>
           <p id="mac-detect" class="mac-detect" hidden></p>
@@ -260,22 +260,22 @@
         <div class="guide-block card">
           <h3>2. Installer l'application</h3>
           <ol>
-            <li>Ouvrez le <code>.zip</code> (double-clic dans Téléchargements).</li>
-            <li>Vous voyez <strong>OptiGest.app</strong>.</li>
-            <li>Glissez-la dans le dossier <strong>Applications</strong> (Launchpad et Spotlight la trouveront).</li>
-            <li>Vous pouvez ensuite supprimer le fichier <code>.zip</code>.</li>
+            <li>Double-cliquez le fichier <code>.dmg</code> téléchargé.</li>
+            <li>Une fenêtre s'ouvre avec l'icône <strong>OptiGest</strong> et un raccourci <strong>Applications</strong>.</li>
+            <li>Glissez l'icône OptiGest sur le dossier Applications.</li>
+            <li>Fermez la fenêtre, puis éjectez le disque <strong>OptiGest</strong> dans la barre latérale du Finder.</li>
           </ol>
         </div>
 
         <div class="guide-block card">
-          <h3>3. Premier lancement (macOS bloque l'app)</h3>
-          <p>L'application n'est pas signée par Apple. Au premier clic, macOS peut afficher qu'elle ne peut pas être ouverte. C'est normal.</p>
+          <h3>3. Premier lancement</h3>
+          <p>OptiGest n'est pas distribuée via l'App Store : macOS demande une confirmation la première fois, une seule fois.</p>
           <ol>
-            <li>Dans Applications, <strong>clic droit</strong> (ou Ctrl + clic) sur OptiGest → <em>Ouvrir</em>.</li>
-            <li>Dans l'alerte, cliquez encore <em>Ouvrir</em>.</li>
-            <li>Si ça reste bloqué : menu Pomme → <strong>Réglages Système</strong> → <strong>Confidentialité et sécurité</strong> → en bas, <em>Ouvrir quand même</em>.</li>
+            <li>Ouvrez <strong>Applications</strong>, faites un <strong>clic droit</strong> (ou Ctrl + clic) sur OptiGest → <em>Ouvrir</em>.</li>
+            <li>Dans l'alerte, cliquez à nouveau <em>Ouvrir</em>.</li>
+            <li>Si le bouton n'apparaît pas : menu Pomme → <strong>Réglages Système</strong> → <strong>Confidentialité et sécurité</strong> → <em>Ouvrir quand même</em>.</li>
           </ol>
-          <p>Ensuite OptiGest s'ouvre comme les autres apps. La première fois peut prendre quelques secondes.</p>
+          <p>Les lancements suivants se font par simple double-clic. Le tout premier démarrage peut prendre quelques secondes.</p>
         </div>
 
         <div class="guide-block card">
@@ -303,8 +303,8 @@
           <p id="download-detect" class="download-detect" hidden></p>
           <div class="download-actions" id="download-actions">
             <a id="download-win" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe" class="btn btn-primary btn-download">Windows</a>
-            <a id="download-mac-arm" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.zip" class="btn btn-primary btn-download">Mac (Apple Silicon)</a>
-            <a id="download-mac-intel" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.zip" class="btn btn-secondary btn-download">Mac (Intel)</a>
+            <a id="download-mac-arm" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.dmg" class="btn btn-primary btn-download">Mac (Apple Silicon)</a>
+            <a id="download-mac-intel" href="https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.dmg" class="btn btn-secondary btn-download">Mac (Intel)</a>
           </div>
           <p id="download-note" class="download-note">Windows 10/11 64 bits · macOS 12+ · dernière version. <a href="#guide-mac">Guide d'installation Mac</a></p>
         </div>
@@ -329,8 +329,8 @@
       var local = location.hostname === "localhost" || location.hostname === "127.0.0.1";
       if (local) {
         if (win) win.href = "installer/OptiGest-Setup.exe";
-        if (macArm) macArm.href = "installer/OptiGest-Mac-arm64.zip";
-        if (macIntel) macIntel.href = "installer/OptiGest-Mac-x64.zip";
+        if (macArm) macArm.href = "installer/OptiGest-Mac-arm64.dmg";
+        if (macIntel) macIntel.href = "installer/OptiGest-Mac-x64.dmg";
         if (note) note.textContent = "Installateurs locaux (dernière build).";
       }
 
