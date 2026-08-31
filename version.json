@@ -1,6 +1,6 @@
 {
-  "version": "1.0.6",
-  "notes": "Sur Mac, les mises à jour s'installent désormais toutes seules. Correction de l'enregistrement des devis et factures.",
+  "version": "1.0.7",
+  "notes": "Correction de l'erreur serveur à la connexion après une mise à jour.",
   "windows": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe",
   "macArm": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.zip",
   "macIntel": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.zip",
