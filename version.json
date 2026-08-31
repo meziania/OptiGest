@@ -1,5 +1,5 @@
 {
-  "version": "1.0.7",
+  "version": "1.0.8",
   "notes": "Correction de l'erreur serveur à la connexion après une mise à jour.",
   "windows": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe",
   "macArm": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.zip",
