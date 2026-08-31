@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "notes": "Vérification des mises à jour au démarrage.",
+  "version": "1.0.5",
+  "notes": "Sur Mac, les mises à jour s'installent désormais toutes seules.",
   "windows": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe",
   "macArm": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.zip",
   "macIntel": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.zip",
