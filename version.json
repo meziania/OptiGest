@@ -1,6 +1,6 @@
 {
-  "version": "1.0.8",
-  "notes": "Correction de l'erreur serveur à la connexion après une mise à jour.",
+  "version": "1.0.9",
+  "notes": "Suppression de la TVA sur devis, factures et PDF.",
   "windows": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Setup.exe",
   "macArm": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-arm64.zip",
   "macIntel": "https://github.com/meziania/OptiGest/releases/latest/download/OptiGest-Mac-x64.zip",
